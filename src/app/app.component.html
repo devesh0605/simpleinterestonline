@@ -1,0 +1,49 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="offset-sm-2 col-sm-8">
+
+      <div class="card text-blank border-0">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h5>Simple Interest Calculator</h5>
+          </div>
+
+          <div class="card-text">
+
+              <div class="form-group">
+                <label>Principal Amount</label>
+                <input type="number" placeholder="Princpal Amount" class="form-control" [(ngModel)]="principal">
+              </div>
+
+              <div class="form-group">
+                <label>Rate of Interest</label>
+                <input type="number" class="form-control" placeholder="Rate of Interest" [(ngModel)]="rate">
+              </div>
+
+              <div class="form-group">
+                <label>Time (in months)</label>
+                <input type="number" class="form-control" placeholder="Number of Months" [(ngModel)]="time">
+              </div>
+
+          
+              
+              <div class="text-center mb-3">
+                <button type="button" class="btn btn-block btn-warning" (click)="calculate()">Calculate SI</button>
+              </div>
+
+              <div class="form-group">
+                <label>Simple Interest</label>
+                <input type="number" class="form-control" placeholder="Interest Amount" [(ngModel)]="si">
+              </div>
+
+              <label>Amount {{ si + principal | currency: "INR" }}</label>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
